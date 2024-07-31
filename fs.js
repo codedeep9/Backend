@@ -39,3 +39,17 @@ fs.writeFile('f3.txt',' ...appending new content xdxdxdxd',(err)=>{
     console.log('file written')
 
 });
+
+// deleting a file
+// fs.unlinkSync('f3.txt')
+
+// creating directory
+
+// fs.mkdirSync('express')
+// removing directory
+
+// fs.rmdirSync('express')
+
+// file exists or not
+const doesExist=fs.existsSync('f7.txt')
+console.log(doesExist)
