@@ -1,0 +1,10 @@
+/home log created
+/favicon.ico log created
+/about log created
+/favicon.ico log created
+/about/ log created
+/favicon.ico log created
+/products/search?shoes=nike log created
+/favicon.ico log created
+/products/search?shoes=nike log created
+/favicon.ico log created
