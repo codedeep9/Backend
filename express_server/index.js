@@ -1,19 +1,47 @@
-const express=require('express');
+const express = require('express');
 
-const app=express();
+const app = express();
+const PORT = 8080;
 
-app.get('/',(req,res)=>{
-    return res.send('<h1>This is home page</h1>')
+const products = require('./data.json');
+
+// routing
+
+app.get('/', (req, res) => {
+    res.send('Hi welcome to the shopping app..')
+});
+
+// hybrid api development
+app.get('/api/products',(req,res)=>{
+    res.json(products);
 })
-app.get('/products',(req,res)=>{
-    console.log(req)
-    return res.send('<h1>This is products page</h1>' +" "+req.query.shoes)
+
+// default route
+// app.get('*',(req,res)=>{
+//     res.status(404).send('page not found');
+// })
+
+// route parameters
+app.get('/api/products/:id',(req,res)=>{
+    const id=Number(req.params.id)
+    const product=products.find((product)=>{
+        return product.id==id
+    })
+    res.send(product.product_name);
 })
-app.get('/contact',(req,res)=>{
-    return res.send('<h1>This is contact page</h1>')
+// server side rendering
+
+app.get('/products', (req, res) => {
+    const html = `<ul>${products.map((product) => {
+        return `<li>${product.product_name}</li>`
+    })}
+    </ul>`
+    res.send(html);
 })
 
 
-app.listen(8086, ()=>{
-    console.log('server is running...')
+
+
+app.listen(PORT, () => {
+    console.log(`server running at port ${PORT}`)
 })
