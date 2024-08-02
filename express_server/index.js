@@ -16,7 +16,7 @@ app.use(express.json())
 
 // Routing
 app.get("/", (req, res) => {
-  res.send("Hi Onkar....Welcome to our demo session....");
+  res.send("Hello user....Welcome to our demo session....");
 });
 
 // Hybrid API developement means same API can access in cross platform devices...
