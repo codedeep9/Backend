@@ -13,9 +13,9 @@
     },
     {
         "id": 3,
-        "product_name": "Crackers - Melba Toast",
-        "product_price ": "$0.43",
-        "is_stock_available": "fbareham2@yahoo.co.jp"
+        "product_name": "milk",
+        "product_price ": "$9.1",
+        "is_stock_available": true
     },
     {
         "id": 4,
